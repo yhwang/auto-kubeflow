@@ -19,6 +19,15 @@
     status_code: [200, 204]
     body: '{"redirectUris": ["https://{{ cluster_hostname }}/login/oidc"]}'
 
+- name: upload kubeflow logo
+  shell: |
+    curl -X 'POST' \
+    '{{ appid_mgmt_url }}/config/ui/media?mediaType=logo' \
+    -H 'accept: application/json' \
+    -H 'Authorization: Bearer {{ iam_token.json|json_query('access_token') }}' \
+    -H 'Content-Type: multipart/form-data' \
+    -F 'file=@{{ lookup('env', 'HOME') }}/bin/kubeflow-logo.png;type=image/png'
+
 - name: create appid config
   shell: |
     KUBECONFIG={{ kube_config }} {{ lookup('env', 'HOME') }}/bin/kubectl delete secret oidc-authservice-client -n istio-system || true

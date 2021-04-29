@@ -30,6 +30,7 @@ to modify the playbook to accommodate your own environment.
 |  zone                  | The zone where the cluster will be created | string  |   | dal10 | |
 |  public_vlan_id        | The id of public vlan | string  |   | | |
 |  private_vlan_id       | The id of private vlan | string  |   | | |
+|  appid_login_logo      | The logo image of the AppID login page. Need to be a png image | string  |   | https://avatars.githubusercontent.com/u/33164907?s=200&v=4 (kubeflow logo) | |
 
 ## Outputs
 

@@ -41,6 +41,12 @@ variable appid_name {
   description = "Instnace name for AppID service"
 }
 
+variable appid_login_logo {
+  type        = string
+  default     = "https://avatars.githubusercontent.com/u/33164907?s=200&v=4"
+  description = "The logo image of the AppID login page. Need to be a png image"
+}
+
 variable cluster_name {
   type        = string
   default     = "my-kfp-cluster"

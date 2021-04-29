@@ -82,6 +82,7 @@ resource "null_resource" "ansible" {
         secret_name             = module.vpc_cluster.cluster_secret
         kube_config             = data.ibm_container_cluster_config.cluster_config.config_file_path
         kfdef_uri               = local.kfdef_uri
+        kubeflow_logo_uri       = var.appid_login_logo
       }
     }
   }

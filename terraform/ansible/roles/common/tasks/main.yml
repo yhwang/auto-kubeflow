@@ -36,6 +36,12 @@
     src: "{{ lookup('env', 'HOME') }}/bin/kfctl.tar.gz"
     dest: "{{ lookup('env', 'HOME') }}/bin"
 
+- name: download kubeflow logo
+  get_url:
+    url: "{{ kubeflow_logo_uri }}"
+    dest: "{{ lookup('env', 'HOME') }}/bin/kubeflow-logo.png"
+    mode: '0444'
+
 - name: get namespace
   shell:
     cmd: "KUBECONFIG={{ kube_config }} {{ lookup('env', 'HOME') }}/bin/kubectl get ns"

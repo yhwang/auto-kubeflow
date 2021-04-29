@@ -27,6 +27,7 @@ to modify the playbook to accommodate your own environment.
 |  cluster_name          | Cluster name | string  |   | my-kfp-cluster | |
 |  cluster_worker_flavor | The machine flavor for the cluster worker nodes | string  |   | bx2.8x32 |  |
 |  cluster_worker_count  | number of workers in the cluster | number  |   | 2 |  |
+|  appid_login_logo      | The logo image of the AppID login page. Need to be a png image | string  |   | https://avatars.githubusercontent.com/u/33164907?s=200&v=4 (kubeflow logo) | |
 
 ## Outputs
 
