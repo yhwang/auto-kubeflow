@@ -1,3 +1,6 @@
+Notice: This repository has been moved to https://github.com/IBM/auto-kubeflow.
+Please use the new URL and this repository will be deleted soon. 
+
 # auto-kubeflow
 [Kubeflow](https://www.kubeflow.org/), an end-to-end Machine Learning(ML)
 platform on kubernetes, provides components and features to compose ML
